@@ -1,0 +1,18 @@
+{
+  "name": "zj-pgzy-getscore-api",
+  "version": "1.0.0",
+  "description": "get score from pgzy.zjzs.net:8011",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.tianhai.info/soha/zj-pgzy-getscore-api.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Soha King",
+  "license": "MIT"
+}
