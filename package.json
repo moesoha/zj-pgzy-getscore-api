@@ -14,5 +14,13 @@
     "api"
   ],
   "author": "Soha King",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "await": "^0.2.6",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "request": "^2.75.0"
+  }
 }

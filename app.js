@@ -14,6 +14,7 @@ var port=process.env.SBPGZY_PORT ? parseInt(process.env.SBPGZY_PORT) : 8000;
 var bodyParser=require('body-parser');
 var logger=require('morgan');
 var path=require('path');
+var getScore=require('./getScore');
 
 //请求处理准备
 app.use(logger('dev'));
@@ -22,7 +23,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
 	extended: false
 }));
-app.use(express.static(path.join(__dirname,'public')));
 
 //全局Header返回
 app.all('*',function (req,res,next){
@@ -31,7 +31,22 @@ app.all('*',function (req,res,next){
     next();
 });
 
-
+//App Start
+app.all('/',function (req,res,next){
+	res.send({
+		status: 200,
+		messages: [
+			'Hello, World!',
+			'you can see the repo to get more information: https://github.com/sohaking/zj-pgzy-getscore-api'
+		]
+	})
+});
+app.all('/get',function (req,res,next){
+	getScore(req.body.id,req.body.pwd,function (data){
+		res.send(data);
+	});
+});
+//App End
 
 //404
 app.use(function(req, res, next) {
