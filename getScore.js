@@ -122,7 +122,7 @@ var getMyScore=function (身份证,密码,callback){
 					}
 				}else{
 					打({
-						url: 'http://127.0.0.1:65506/his.html',
+						url: 垃圾站+'/xklscj.aspx',
 						headers: 爸爸的请求头
 					},function (错误,返回,说了啥){
 						var 垃圾儿子给的成绩页面=说了啥.replace(new RegExp('<td class="tdright"></td>','gm'),'<td class="tdright">empty</td>');
@@ -165,7 +165,7 @@ var getMyScore=function (身份证,密码,callback){
 							}
 						}
 						打({
-							url: 'http://127.0.0.1:65506/fin.html',
+							url: 垃圾站+'/xkzzcj.aspx',
 							headers: 爸爸的请求头
 						},function (错误,返回,说了啥){
 							var 垃圾儿子给的成绩页面=说了啥.replace(new RegExp('<td class="tdright"></td>','gm'),'<td class="tdright">empty</td>');
